@@ -1,11 +1,19 @@
+import { Route, Routes } from 'react-router'
 import './App.css'
+
+import Header from './components/header/Header'
 
 function App() {
 
   return (
-    <>
+    <> 
 
-      <h1>My React Final Project</h1>
+    <Header />
+
+    <Routes>
+      <Route />
+    </Routes>
+
 
     </>
   )

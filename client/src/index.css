@@ -1,0 +1,48 @@
+/*reset styles*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+
+
+/*typography styles*/
+html {
+    font: 14pt/1.5 Verdana, Helvetica, Arial, sans-serif;
+    color: #3a3b29;
+}
+
+body, input, textarea, button, select, table {
+    font: inherit; 
+    color: inherit;
+}
+
+h1 { font-size: 3.0em; } 
+h2 { font-size: 2.2em; }
+h3 { font-size: 1.8em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1.0em; }
+
+
+
+/**/
+body {
+    min-height: 100dvh;
+}
+
+img {
+    max-width: 100%;
+} 
+
+
+.btn {
+    border: 1px solid #3a3b29;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+}
