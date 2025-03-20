@@ -1,0 +1,79 @@
+/* feature styles */
+div.feature {
+    background-image: url('public/images/background.jpg'); 
+    /* background-image: url('images/background3.jpg');  */
+    background-repeat: no-repeat;
+    background-position: center top -5em; 
+    background-size: cover;
+    padding: 16em 0;
+    /* padding: 8em 0; */
+}
+
+div.title {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: -10em;
+}
+
+div.title h1 {
+    width: 10ch;
+    color: #3a3b29;
+    padding-bottom: 0.5em;
+}
+
+div.title .btn {
+    border: 1px solid #3a3b29;
+    color: #3a3b29;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+}
+
+div.title .btn:hover {
+    background-color: #3a3b29; 
+    color: #edd19f;
+}
+
+
+
+/* parks-container styles */
+div.parks-container {
+    display: flex;
+    padding: 3rem 3.5rem;
+    gap: 3em;
+    justify-content: space-between;
+    /* background-image: linear-gradient(#f3eac4, #edd19f, #caa367); */
+    background-image: linear-gradient(#f4e1b6, #f3d69a, #eac38c);
+}
+
+div.parks-container article {
+    text-align: center;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.5);
+    padding: 2em 1em;
+    border-radius: 0.5em;
+}
+
+div.parks-container article h2 {
+    font-size: 2em;
+    padding-bottom: 0.3em;
+}
+
+div.parks-container article p {
+    padding-bottom: 1em;
+}
+
+div.parks-container article div.img-container {
+    padding-bottom: 1em;
+    /* border-radius: 1.5em;  */
+    border-radius: 50%; 
+    overflow: hidden;
+}
+
+div.parks-container article .btn {
+    /* background-color: #f3eac4; */
+    background-color: #3a3b29;
+    color: #f4e1b6;
+    border: none;
+}

@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router'
 import './App.css'
 
 import Header from './components/header/Header'
+import Home from './components/home/Home'
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
     <Header />
 
     <Routes>
-      <Route />
+      <Route index element={<Home />} />
     </Routes>
 
 
