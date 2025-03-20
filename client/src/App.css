@@ -1,0 +1,7 @@
+div.feature {
+    background-image: url('public/images/background.jpg'); 
+    background-repeat: no-repeat;
+    background-position: center top -5em; 
+    background-size: cover;
+    padding: 16em 0;
+}

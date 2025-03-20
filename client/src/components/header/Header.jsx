@@ -13,7 +13,7 @@ export default function Header() {
             <nav>
                 <div className="nav-items-container" id="nav-items-container">
                     <ul className="nav-items">
-                        <li> <Link to="/home">Home</Link></li>
+                        <li> <Link to="/">Home</Link></li>
                         <li> <Link to="/wakeparks">Wake Parks</Link></li>
 
                         {/* <!-- loggedIn user --> */}
