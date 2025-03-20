@@ -8,7 +8,7 @@ export default function Header() {
     return (
         <header>
             <div id="logo-container">
-                <p className="logo"><Link to="/home">Wake Spot Map</Link></p>
+                <p className="logo"><Link to="/">Wake Spot Map</Link></p>
             </div>
             <nav>
                 <div className="nav-items-container" id="nav-items-container">

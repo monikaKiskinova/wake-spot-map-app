@@ -1,4 +1,4 @@
-.login-container {
+.register-container {
     background-color: rgba(255, 255, 255, 0.3);
     display: flex;
     flex-direction: column;
@@ -12,17 +12,18 @@
     box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.4);
 }
 
-form.login-form label{
+form.register-form label{
     display: none;
 }
 
-form.login-form input{
+form.register-form input{
     display: block;
     margin: 1em;
     padding: 0.5em;
+    /* background-csolor: transparent; */
 }
 
-form.login-form .btn {
+form.register-form .btn {
     display: inline-block;
     padding: 0.5em 2em; 
     margin-top: 0.2em;
@@ -31,6 +32,6 @@ form.login-form .btn {
     color: #edd19f;
 }
 
-.login-container p {
+.register-container p {
     font-size: 0.8em;
 }
