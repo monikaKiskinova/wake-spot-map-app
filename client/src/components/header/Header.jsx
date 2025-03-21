@@ -21,7 +21,7 @@ export default function Header() {
                         <li> <Link className="profile" to="/logout">Log out</Link></li>
 
                         {/* <!-- all users --> */}
-                        <li> <Link className="profile" to="/login">My Profile</Link></li>
+                        <li> <Link className="profile" to="/profile">My Profile</Link></li>
                         <li> <Link className="profile" to="/login">Log in</Link></li>
                     </ul>
                     <div className="clear"></div>

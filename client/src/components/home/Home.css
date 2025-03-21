@@ -1,6 +1,6 @@
 /* feature styles */
 div.feature {
-    background-image: url('public/images/background.jpg'); 
+    background-image: url('/images/background.jpg'); 
     /* background-image: url('images/background3.jpg');  */
     background-repeat: no-repeat;
     background-position: center top -5em; 

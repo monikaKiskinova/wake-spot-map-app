@@ -1,0 +1,17 @@
+div.page-not-found-container {
+    background-color: #a69e85;
+    padding: 10em;
+    text-align: center;
+}
+
+div.page-not-found-container h1 {
+    font-size: 4em;
+}
+
+div.page-not-found-container a {
+    color: #edd19f;
+}
+
+div.page-not-found-container a:hover {
+    color: #3a3b29;
+}
