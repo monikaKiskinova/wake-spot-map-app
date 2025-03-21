@@ -6,6 +6,7 @@ import Home from './components/home/Home'
 import Footer from './components/footer/Footer'
 import Login from './components/login/Login'
 import Register from './components/register/Register'
+import CreatePark from './components/create/CreatePark'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <Route index element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/create" element={<CreatePark />} />
     </Routes>
 
     <Footer />
