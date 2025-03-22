@@ -7,7 +7,7 @@ export default function CreatePark() {
         <div className="create-container">
             <h2>Add a Park</h2>
             <form className="form create-form" action="">
-                <label for="name">Name of Park</label>
+                <label for="name">Name of Park:</label>
                 <input type="text" id="name" name="name" placeholder="Name of Park" required />
 
                 <label for="continent">Choose a continent:</label>
@@ -21,13 +21,16 @@ export default function CreatePark() {
                     <option value="Australia/Oceania">Australia/Oceania</option>
                 </select>
 
-                <label for="country">Country</label>
+                <label for="country">Country:</label>
                 <input type="text" id="country" name="country" placeholder="Country" required />
 
-                <label for="imageUrl">Image</label>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" placeholder="Address" required />
+
+                <label for="imageUrl">Image:</label>
                 <input type="url" id="imageUrl" name="imageUrl" placeholder="Image" required />
 
-                <label for="website">Website</label>
+                <label for="website">Website:</label>
                 <input type="url" id="website" name="website" placeholder="Website" />
 
                 <label for="info">Information about the park:</label>

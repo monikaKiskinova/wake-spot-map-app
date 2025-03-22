@@ -18,13 +18,11 @@ export default function Header() {
 
                         {/* <!-- loggedIn user --> */}
                         <li> <Link className="profile" to="/profile">My Profile</Link></li>
-                        <li> <Link className="profile" to="/logout">Log out</Link></li>
+                        <li> <Link className="proflogoutile" to="/logout">Log out</Link></li>
 
                         {/* <!-- all users --> */}
-                        <li> <Link className="profile" to="/profile">My Profile</Link></li>
-                        <li> <Link className="profile" to="/login">Log in</Link></li>
+                        <li> <Link className="login" to="/login">Log in</Link></li>
                     </ul>
-                    <div className="clear"></div>
                 </div>
             </nav>
         </header>

@@ -1,6 +1,6 @@
 .outer-container {
     background-color: #a69e85;
-    padding: 3em;
+    padding: 2em;
 }
 
 .create-container {
@@ -44,12 +44,15 @@
 } */
 
 form.create-form .btn {
-    background-color: transparent;
+    /* background-color: transparent; */
     /* background-color: #a69e85; */
-    color: #3a3b29;
+    /* color: #3a3b29;  */
+    background-color: #3a3b29; 
+    color: #edd19f;
 }
 
 form.create-form .btn:hover {
-    background-color: #3a3b29; 
-    color: #edd19f;
+    /* background-color: #3a3b29;  */
+    background-color: #a69e85; 
+    color: #3a3b29;
 }

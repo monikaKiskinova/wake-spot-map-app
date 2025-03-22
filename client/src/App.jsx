@@ -4,6 +4,7 @@ import './App.css'
 import Header from './components/header/Header'
 import Home from './components/home/Home'
 import Footer from './components/footer/Footer'
+import Wakeparks from './components/wakeparks/Wakeparks'
 import Login from './components/login/Login'
 import Register from './components/register/Register'
 import CreatePark from './components/create/CreatePark'
@@ -18,6 +19,7 @@ function App() {
 
     <Routes>
       <Route index element={<Home />} />
+      <Route path="/wakeparks" element={<Wakeparks />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/create" element={<CreatePark />} />
