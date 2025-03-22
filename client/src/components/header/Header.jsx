@@ -18,7 +18,7 @@ export default function Header() {
 
                         {/* <!-- loggedIn user --> */}
                         <li> <Link className="profile" to="/profile">My Profile</Link></li>
-                        <li> <Link className="proflogoutile" to="/logout">Log out</Link></li>
+                        <li> <Link className="logout" to="/logout">Log out</Link></li>
 
                         {/* <!-- all users --> */}
                         <li> <Link className="login" to="/login">Log in</Link></li>

@@ -26,11 +26,13 @@ div.wakeparks-container section {
     gap: 3em;
     padding: 2em 3.5em;
     border-radius: 0.5em;
-    background-image: linear-gradient(#f4e1b6, #f3d69a, #eac38c);
+    background-image: linear-gradient(#f4e1b6, #f3d69a, #eac38c); 
+    /* width: fit-content; */
+    min-width: fit-content;
 }
 
 div.wakeparks-container div.park-details-container {
-    width: 60%;
+    max-width: 60%;
     display: flex;
     flex-direction: column;
     gap: 1.5em;
@@ -54,10 +56,27 @@ div.wakeparks-container section .btn {
     background-color: #3a3b29;
     color: #f4e1b6;
     border: none;
+    text-wrap: nowrap;
 }
 
 div.wakeparks-container section .btn:hover {
     background-color: #a69e85;
     color: #3a3b29;
     border: 2px solid #3a3b29;
+}
+
+
+@media (max-width: 600px) {
+    div.wakeparks-container section {
+        flex-direction: column;
+    }
+
+    div.wakeparks-container .images-container {
+        flex-direction: column;
+        /* text-align: center; */
+    }
+
+    div.wakeparks-container .images-container img {
+        display: inline-block;
+    }
 }

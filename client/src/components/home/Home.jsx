@@ -18,7 +18,7 @@ export default function Home() {
                     <div className="img-container">
                         <img src="/images/article-img.jpg" alt="" width="400px" />
                     </div>
-                    <Link to="" className="btn see-more-btn">See more...</Link>
+                    <Link to="/wakeparks/wakeId/details" className="btn see-more-btn">See more...</Link>
                 </article>
                 <article className="park-article">
                     <h2>Park Name</h2>
@@ -26,7 +26,7 @@ export default function Home() {
                     <div className="img-container">
                         <img src="/images/article-img.jpg" alt="" width="400px" />
                     </div>
-                    <Link to="/" className="btn see-more-btn">See more...</Link>
+                    <Link to="/wakeparks/wakeId/details" className="btn see-more-btn">See more...</Link>
                 </article>
                 <article className="park-article">
                     <h2>Park Name</h2>
@@ -34,7 +34,7 @@ export default function Home() {
                     <div className="img-container">
                         <img src="/images/article-img.jpg" alt="" width="400px" />
                     </div>
-                    <Link to="/" className="btn see-more-btn">See more...</Link>
+                    <Link to="/wakeparks/wakeId/details" className="btn see-more-btn">See more...</Link>
                 </article>
             </div>
         </>

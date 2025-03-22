@@ -1,0 +1,96 @@
+div.outer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+div.details-container,
+div.comments-container {
+    background-image: linear-gradient(#f4e1b6, #f3d69a, #eac38c);
+    display: flex;
+    gap: 2em;
+    padding: 2em;
+    min-width: fit-content;
+    border-radius: 0.5em; 
+}
+
+div.details-container .images-container {
+    max-width: 35%;
+}
+
+div.details-container .small-images-container {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 1em;
+    min-width: fit-content;
+}
+
+div.details-container .images-container img {
+    border-radius: 0.5em;
+}
+
+div.details-container .small-images-container img {
+    max-width: 25%;
+}
+
+div.details-container div.park-details-container {
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+div.details-container div.info-container h2 {
+    padding-bottom: 0.5em;
+}
+
+div.details-container div.info-container p.address {
+    padding-bottom: 2em;
+}
+
+
+
+/* comments-container */
+div.comments-container {
+    display: flex;
+    flex-direction: column;
+}
+
+div.comments-container h3 {
+    font-size: 1.5em;
+}
+
+
+/* button containers styles */
+div.details-container .btn-container, 
+div.comments-container .btn-container {
+    text-align: right;
+}
+
+div.details-container .btn, 
+div.comments-container .btn {
+    background-color: #3a3b29;
+    color: #f4e1b6;
+    border: none;
+    text-wrap: nowrap;
+    margin-left: 1em;
+}
+
+div.details-container .btn:hover, 
+div.comments-container .btn:hover {
+    background-color: #a69e85;
+    color: #3a3b29;
+    border: 2px solid #3a3b29;
+}
+
+
+
+@media (max-width: 600px) {
+    div.details-container {
+        flex-direction: column; 
+    }
+
+    div.details-container .small-images-container {
+        flex-direction: column;
+    }
+}
