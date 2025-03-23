@@ -1,12 +1,22 @@
+import { wakeparkService } from '../../services/wakeparksService'; 
+import { useNavigate } from 'react-router';
+
 import './CreatePark.css'
 
 export default function CreatePark() {
+    const navigate = useNavigate();
+
+    const submitAction = async (formData) => {
+        const parkData = Object.fromEntries(formData);
+        await wakeparkService.create(parkData);
+        navigate('/wakeparks');
+    }
 
     return (
         <div className="outer-container">
         <div className="create-container">
             <h2>Add a Park</h2>
-            <form className="form create-form" action="">
+            <form className="form create-form" action={submitAction}>
                 <label for="name">Name of Park:</label>
                 <input type="text" id="name" name="name" placeholder="Name of Park" required />
 
@@ -24,6 +34,9 @@ export default function CreatePark() {
                 <label for="country">Country:</label>
                 <input type="text" id="country" name="country" placeholder="Country" required />
 
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" placeholder="Address" required />
+
                 <label for="imageUrl">Image:</label>
                 <input type="url" id="imageUrl" name="imageUrl" placeholder="Main Image" required />
 
@@ -35,12 +48,6 @@ export default function CreatePark() {
                 
                 <label for="imageUrl">Image:</label>
                 <input type="url" id="imageUrl" name="imageUrl" placeholder="Add Another Image" />
-
-                <label for="address">Address:</label>
-                <input type="text" id="address" name="address" placeholder="Address" required />
-
-                <label for="imageUrl">Image:</label>
-                <input type="url" id="imageUrl" name="imageUrl" placeholder="Image" required />
 
                 <label for="website">Website:</label>
                 <input type="url" id="website" name="website" placeholder="Website" />

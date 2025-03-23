@@ -1,10 +1,22 @@
 {
-    "da143899-b484-4f87-8b70-1a3607b72d12": {
-        "title": "Delta Force 1",
-        "category": "Shooter",
-        "maxLevel": "30",
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/a/a5/DF1-game.JPG",
-        "summary": "Delta Force 1 is a tactical shooter game where players assume the role of a member of the elite counter-terrorism unit, Delta Force.",
-        "_id": "da143899-b484-4f87-8b70-1a3607b72d12"
+    "4cb46ae1-44b0-4b35-9aaf-f3e42b584d05": {
+        "name": "Wake Park Varna",
+        "continent": "Europe",
+        "country": "Bulgaria",
+        "address": "Coastal Alley 9010 Varna",
+        "imageUrl": "",
+        "website": "https://wakeparkvarna.com/",
+        "info": "Wake Park Varna is the first and only wake park in Varna and on the north coast of The Black Sea in Bulgaria. \nYou can ride with your own equipment or rent from the park. They also offer wakeboarding lessons.\nThere are two lines - one for beginners and one for more advanced riders. ",
+        "_id": "4cb46ae1-44b0-4b35-9aaf-f3e42b584d05"
+    },
+    "3a400d08-c81d-4259-8ca3-1f30e6ac7e91": {
+        "name": "Park X Plovdiv",
+        "continent": "Europe",
+        "country": "Bulgaria",
+        "address": "Stryama, Plovdiv",
+        "imageUrl": "",
+        "website": "",
+        "info": "Park X Plovdiv is a wakepark featuring 3 x Two Tower Systems and SHAPE obstacles: 4 x kickers, roller pop off, rooftop, wedge rail, curve slider and 20 m straight pipe. ",
+        "_id": "3a400d08-c81d-4259-8ca3-1f30e6ac7e91"
     }
 }
