@@ -14,6 +14,9 @@ export const wakeparkService = {
     create (parkData) {
         return request.post(baseUrl, parkData);
     },
+    edit (parkId, parkData) {
+        return request.put(`${baseUrl}/${parkId}`, {...parkData, _id: parkId});
+    },
     delete(parkId) {
         return request.delete(`${baseUrl}/${parkId}`);
     }

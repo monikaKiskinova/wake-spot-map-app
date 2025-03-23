@@ -1,0 +1,40 @@
+.edit-container {
+    text-align: center;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.5);
+    padding: 2em 1em;
+    border-radius: 0.5em; 
+    background-image: linear-gradient(#f4e1b6, #f3d69a, #eac38c);
+    width: 40%;
+    margin: 2em auto;
+} 
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+}
+
+.edit-form label {
+    /* text-align: left; */
+    display: none;
+}
+
+.edit-form input, 
+.edit-form textarea, 
+.edit-form select {
+    padding: 0.3em;
+    margin-bottom: 1em;
+    background-color: transparent;
+    /* background-color: #a69e85; */
+    border: 2px solid #3a3b29;
+}
+
+form.edit-form .btn {
+    background-color: #3a3b29; 
+    color: #edd19f;
+}
+
+form.edit-form .btn:hover {
+    background-color: #a69e85; 
+    color: #3a3b29;
+}

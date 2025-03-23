@@ -48,7 +48,7 @@ export default function ParkDetails() {
                         <p className="info">{park.info}</p>
                     </div>
                     <div className="btn-container">
-                        <Link to="" className="btn edit-btn">Edit</Link>
+                        <Link to={`/wakeparks/${parkId}/edit`} className="btn edit-btn">Edit</Link>
                         <button onClick={deleteParkClickHandler} className="btn delete-btn">Delete</button>
                     </div>
                 </div>
