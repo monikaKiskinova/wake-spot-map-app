@@ -9,13 +9,13 @@ export default function Register() {
             <div className="register-container">
                 <h2>REGISTER</h2>
                 <form className="form register-form" action="">
-                    <label for="username">Username</label>
+                    <label htmlFor="username">Username</label>
                     <input type="text" id="username" name="username" placeholder="Username" required />
 
-                    <label for="email">Email</label>
+                    <label htmlFor="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Email" required />
 
-                    <label for="password">Password</label>
+                    <label htmlFor="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Password" required />
                     <input type="submit" className="btn submit" value="Register" />
                 </form>

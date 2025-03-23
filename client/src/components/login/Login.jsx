@@ -9,10 +9,10 @@ export default function Login() {
             <div className="login-container">
                 <h2>LOGIN</h2>
                 <form className="form login-form" action="">
-                    <label for="username">Username</label>
+                    <label htmlFor="username">Username</label>
                     <input type="text" id="username" name="username" placeholder="Username" required />
 
-                    <label for="password">Password</label>
+                    <label htmlFor="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Password" required />
                     <input type="submit" className="btn submit login-btn" value="Login" />
                 </form>

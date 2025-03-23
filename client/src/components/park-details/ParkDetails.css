@@ -67,6 +67,10 @@ div.comments-container .btn-container {
     text-align: right;
 }
 
+div.details-container .btn-container .delete-btn {
+    margin-left: 1em;
+}
+
 
 
 

@@ -1,6 +1,7 @@
 import { Link } from 'react-router'
 
-// import './Wakeparks.css'
+// import './WakeparkItem.css'
+// import '../Wakeparks.css'
 
 export default function WakeparkItem({
     _id, name, country, address, mainImageUrl, imageUrl,

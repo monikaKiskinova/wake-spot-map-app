@@ -7,6 +7,11 @@ export const wakeparkService = {
         const parks = Object.values(result);        
         return parks;
     },
+    async getOne(parkId) {
+        const response = await fetch(`${baseUrl}/${parkId}`);
+        const park = await response.json();        
+        return park;
+    },
     async create(parkData) {
         const response = await fetch(baseUrl, {
             method: 'POST',

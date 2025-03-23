@@ -1,14 +1,25 @@
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router';
 import { Link } from 'react-router'
 
 import './ParkDetails.css'
+import { wakeparkService } from '../../services/wakeparksService';
 
 export default function ParkDetails() {
+    const {parkId} = useParams();
+    const [park, setPark] = useState({});
+
+    useEffect(() => {
+        wakeparkService.getOne(parkId)
+            .then(setPark);
+    }, [parkId]);
+
     return (
         <div className="outer-container">
             <div className="details-container">
                 <div className="images-container">
                     <div className="main-img-container">
-                        <img src="https://welldoers.com/dynamic/gallery/OTdQ9yoDhN.jpg" alt="" width="450px" />
+                        <img src={park.mainImageUrl} alt="" width="450px" />
                     </div>
                     <div className="small-images-container">
                         <img src="/images/article-img.jpg" alt="" width="220px" />
@@ -18,11 +29,10 @@ export default function ParkDetails() {
                 </div>
                 <div className="park-details-container">
                     <div className="info-container">
-                        <h2>Welldoers</h2>
-                        <p className="location">Bulgaria</p>
-                        <p className="address">4147 Kalekovets, Plovdiv</p>
-                        <p className="info">Welldoers is located only 13km from “Kapana” in Plovdiv, in the field of the village of Kalekovets.
-                            The park has two lines - Rookie and Pro.</p>
+                        <h2>{park.name}</h2>
+                        <p className="location">{park.country}</p>
+                        <p className="address">{park.address}</p>
+                        <p className="info">{park.info}</p>
                     </div>
                     <div className="btn-container">
                         <Link to="" className="btn edit-btn">Edit</Link>
