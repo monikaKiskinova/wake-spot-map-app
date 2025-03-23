@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router'
+import { useNavigate } from 'react-router';
 
 import './ParkDetails.css'
 import { wakeparkService } from '../../services/wakeparksService';
 
 export default function ParkDetails() {
+    const navigate = useNavigate();
     const {parkId} = useParams();
     const [park, setPark] = useState({});
 
@@ -13,6 +15,17 @@ export default function ParkDetails() {
         wakeparkService.getOne(parkId)
             .then(setPark);
     }, [parkId]);
+
+    const deleteParkClickHandler = async () => {
+        const hasDeleteConfirm = confirm(`Are you sure you want to delete ${park.name}?`);
+
+        if(!hasDeleteConfirm) {
+            return;
+        }
+
+        await wakeparkService.delete(parkId);
+        navigate('/wakeparks');
+    }
 
     return (
         <div className="outer-container">
@@ -36,7 +49,7 @@ export default function ParkDetails() {
                     </div>
                     <div className="btn-container">
                         <Link to="" className="btn edit-btn">Edit</Link>
-                        <Link to="" className="btn delete-btn">Delete</Link>
+                        <button onClick={deleteParkClickHandler} className="btn delete-btn">Delete</button>
                     </div>
                 </div>
             </div>
