@@ -13,6 +13,12 @@ div.search-container input {
 }
 
 
+h1.all-wakeparks {
+    font-size: 2.2em;
+    text-align: center;
+}
+
+
 
 div.wakeparks-container {
     display: flex;

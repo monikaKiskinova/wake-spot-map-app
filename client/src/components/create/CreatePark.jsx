@@ -38,16 +38,16 @@ export default function CreatePark() {
                 <input type="text" id="address" name="address" placeholder="Address" required />
 
                 <label for="imageUrl">Image:</label>
-                <input type="url" id="imageUrl" name="imageUrl" placeholder="Main Image" required />
+                <input type="url" name="mainImageUrl" placeholder="Main Image" required />
 
                 <label for="imageUrl">Image:</label>
-                <input type="url" id="imageUrl" name="imageUrl" placeholder="Add Another Image" />
+                <input type="url" name="imageUrl" placeholder="Add Another Image" />
                 
                 <label for="imageUrl">Image:</label>
-                <input type="url" id="imageUrl" name="imageUrl" placeholder="Add Another Image" />
+                <input type="url" name="imageUrl" placeholder="Add Another Image" />
                 
                 <label for="imageUrl">Image:</label>
-                <input type="url" id="imageUrl" name="imageUrl" placeholder="Add Another Image" />
+                <input type="url" name="imageUrl" placeholder="Add Another Image" />
 
                 <label for="website">Website:</label>
                 <input type="url" id="website" name="website" placeholder="Website" />

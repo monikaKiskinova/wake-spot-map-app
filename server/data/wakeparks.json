@@ -4,6 +4,7 @@
         "continent": "Europe",
         "country": "Bulgaria",
         "address": "Coastal Alley 9010 Varna",
+        "mainImageUrl": "https://wakescout.com/wp-content/uploads/2020/03/XQN_b56d709e688cd830787ca00dccb24c396e5d0621.jpeg",
         "imageUrl": "",
         "website": "https://wakeparkvarna.com/",
         "info": "Wake Park Varna is the first and only wake park in Varna and on the north coast of The Black Sea in Bulgaria. \nYou can ride with your own equipment or rent from the park. They also offer wakeboarding lessons.\nThere are two lines - one for beginners and one for more advanced riders. ",
@@ -14,9 +15,21 @@
         "continent": "Europe",
         "country": "Bulgaria",
         "address": "Stryama, Plovdiv",
+        "mainImageUrl": "https://wakescout.com/wp-content/uploads/2020/03/REA_beb9368ffcf14f0857624ef90e14eecaff4e16f2-920x518.jpeg",
         "imageUrl": "",
         "website": "",
         "info": "Park X Plovdiv is a wakepark featuring 3 x Two Tower Systems and SHAPE obstacles: 4 x kickers, roller pop off, rooftop, wedge rail, curve slider and 20 m straight pipe. ",
         "_id": "3a400d08-c81d-4259-8ca3-1f30e6ac7e91"
-    }
+    }, 
+    "13c1bfb2-0fce-4e5a-8975-f6196a3946fb": {
+        "name": "Welldoers",
+        "continent": "Europe",
+        "country": "Bulgaria",
+        "address": "4147 Kalekovets, Plovdiv",
+        "mainImageUrl": "https://welldoers.com/dynamic/gallery/OTdQ9yoDhN.jpg",
+        "imageUrl": "",
+        "website": "https://welldoers.com/",
+        "info": "Welldoers is located only 13km from “Kapana” in Plovdiv, in the field of the village of Kalekovets. \nThe park has two lines - Rookie and Pro.",
+        "_id": "13c1bfb2-0fce-4e5a-8975-f6196a3946fb"
+      }
 }
