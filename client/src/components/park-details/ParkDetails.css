@@ -67,21 +67,6 @@ div.comments-container .btn-container {
     text-align: right;
 }
 
-div.details-container .btn, 
-div.comments-container .btn {
-    background-color: #3a3b29;
-    color: #f4e1b6;
-    border: none;
-    text-wrap: nowrap;
-    margin-left: 1em;
-}
-
-div.details-container .btn:hover, 
-div.comments-container .btn:hover {
-    background-color: #a69e85;
-    color: #3a3b29;
-    border: 2px solid #3a3b29;
-}
 
 
 

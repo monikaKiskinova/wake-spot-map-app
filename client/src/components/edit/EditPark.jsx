@@ -1,11 +1,11 @@
-import './CreatePark.css'
+// import './CreatePark.css'
 
-export default function CreatePark() {
+export default function EditPark() {
 
     return (
         <div className="outer-container">
         <div className="create-container">
-            <h2>Add a Park</h2>
+            <h2>Edit Park Information</h2>
             <form className="form create-form" action="">
                 <label for="name">Name of Park:</label>
                 <input type="text" id="name" name="name" placeholder="Name of Park" required />
@@ -24,6 +24,9 @@ export default function CreatePark() {
                 <label for="country">Country:</label>
                 <input type="text" id="country" name="country" placeholder="Country" required />
 
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" placeholder="Address" required />
+
                 <label for="imageUrl">Image:</label>
                 <input type="url" id="imageUrl" name="imageUrl" placeholder="Main Image" required />
 
@@ -36,19 +39,13 @@ export default function CreatePark() {
                 <label for="imageUrl">Image:</label>
                 <input type="url" id="imageUrl" name="imageUrl" placeholder="Add Another Image" />
 
-                <label for="address">Address:</label>
-                <input type="text" id="address" name="address" placeholder="Address" required />
-
-                <label for="imageUrl">Image:</label>
-                <input type="url" id="imageUrl" name="imageUrl" placeholder="Image" required />
-
                 <label for="website">Website:</label>
                 <input type="url" id="website" name="website" placeholder="Website" />
 
                 <label for="info">Information about the park:</label>
                 <textarea id="info" name="info" rows="10" cols="25" placeholder="Tell us something about this park"></textarea>
                 
-                <input type="submit" className="btn submit" value="Add" />
+                <input type="submit" className="btn submit" value="Edit" />
             </form>
         </div>
         </div>

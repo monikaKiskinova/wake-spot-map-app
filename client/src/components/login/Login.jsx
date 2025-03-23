@@ -14,7 +14,7 @@ export default function Login() {
 
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Password" required />
-                    <input type="submit" className="btn submit" value="Login" />
+                    <input type="submit" className="btn submit login-btn" value="Login" />
                 </form>
                 <p>Your first time here? Go <Link to="/register">register</Link></p>
             </div>

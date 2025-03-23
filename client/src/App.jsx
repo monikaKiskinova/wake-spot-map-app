@@ -8,6 +8,7 @@ import Wakeparks from './components/wakeparks/Wakeparks'
 import Login from './components/login/Login'
 import Register from './components/register/Register'
 import CreatePark from './components/create/CreatePark'
+import EditPark from './components/edit/EditPark'
 import ParkDetails from './components/park-details/ParkDetails'
 import PageNotFound from './components/page-not-found/PageNotFound'
 
@@ -23,6 +24,7 @@ function App() {
       <Route path="/wakeparks" element={<Wakeparks />} />
       <Route path="/wakeparks/create" element={<CreatePark />} />
       <Route path="/wakeparks/:parkId/details" element={<ParkDetails />} />
+      <Route path="/wakeparks/:parkId/edit" element={<EditPark />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="*" element={<PageNotFound />} />

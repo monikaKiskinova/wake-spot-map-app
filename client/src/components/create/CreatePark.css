@@ -34,25 +34,12 @@
     border: 2px solid #3a3b29;
 }
 
-/* form.create-form .btn {
-    display: inline-block;
-    padding: 0.5em 2em; 
-    margin-top: 0.2em;
-    margin-bottom: 1.5em;
-    background-color: #3a3b29;
-    color: #edd19f;
-} */
-
 form.create-form .btn {
-    /* background-color: transparent; */
-    /* background-color: #a69e85; */
-    /* color: #3a3b29;  */
     background-color: #3a3b29; 
     color: #edd19f;
 }
 
 form.create-form .btn:hover {
-    /* background-color: #3a3b29;  */
     background-color: #a69e85; 
     color: #3a3b29;
 }
