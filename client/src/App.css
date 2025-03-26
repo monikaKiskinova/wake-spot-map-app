@@ -12,19 +12,22 @@ div.feature {
 .see-more-btn,
 .edit-btn, 
 .delete-btn, 
-.comment-btn {
+.comment-btn, 
+.btn.submit {
     background-color: #3a3b29;
     color: #f4e1b6;
-    border: none;
+    /* border: none; */
     text-wrap: nowrap;
-    /* margin-left: 1em; */
 }
 
 .see-more-btn:hover, 
 .edit-btn:hover, 
 .delete-btn:hover, 
-.comment-btn:hover {
-    background-color: #a69e85;
+.comment-btn:hover, 
+.btn.submit:hover {
+    /* background-color: #a69e85; */
+    background-color: transparent;
     color: #3a3b29;
-    border: 2px solid #3a3b29;
+    /* border: 2px solid #3a3b29; */
+    box-shadow: 0 0 0.5em 0 rgb(0, 0, 0, 0.4);
 }

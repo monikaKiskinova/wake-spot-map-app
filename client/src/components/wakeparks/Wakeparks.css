@@ -27,49 +27,41 @@ div.wakeparks-container {
     gap: 2em;
 }
 
-div.wakeparks-container section {
+div.wakeparks-container section.park-article {
     display: flex;
     gap: 3em;
     padding: 2em 3.5em;
     border-radius: 0.5em;
     background-image: linear-gradient(#f4e1b6, #f3d69a, #eac38c); 
-    /* width: fit-content; */
     min-width: fit-content;
 }
 
-div.wakeparks-container div.park-details-container {
-    max-width: 60%;
+div.wakeparks-container section.park-article .main-img-container {
+    min-width: 30%;
+}
+
+div.wakeparks-container section.park-article div.park-details-container {
+    width: 65%;
+    /* min-width: fit-content; */
     display: flex;
     flex-direction: column;
     gap: 1.5em;
-    /* justify-content: space-between; */
 }
 
 div.wakeparks-container .images-container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-div.wakeparks-container section img {
+div.wakeparks-container section.park-article img {
     border-radius: 0.5em; 
 }
 
-div.wakeparks-container section .btn-container {
+div.wakeparks-container section.park-article .btn-container {
 text-align: right;
 }
 
-div.wakeparks-container section .btn {
-    background-color: #3a3b29;
-    color: #f4e1b6;
-    border: none;
-    text-wrap: nowrap;
-}
-
-div.wakeparks-container section .btn:hover {
-    background-color: #a69e85;
-    color: #3a3b29;
-    border: 2px solid #3a3b29;
-}
 
 
 @media (max-width: 600px) {

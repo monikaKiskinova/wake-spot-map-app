@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router'
+import { useState } from 'react'
 import './App.css'
 
 import Header from './components/header/Header'
@@ -13,6 +14,11 @@ import ParkDetails from './components/park-details/ParkDetails'
 import PageNotFound from './components/page-not-found/PageNotFound'
 
 function App() {
+  const [authData, setAuthData] = useState({});
+
+  const userLoginHadler = (resultData) => {
+    setAuthData(resultData);
+  };
 
   return (
     <> 
@@ -25,7 +31,7 @@ function App() {
       <Route path="/wakeparks/create" element={<CreatePark />} />
       <Route path="/wakeparks/:parkId/details" element={<ParkDetails />} />
       <Route path="/wakeparks/:parkId/edit" element={<EditPark />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/login" element={<Login onLogin={userLoginHadler}/>} />
       <Route path="/register" element={<Register />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>

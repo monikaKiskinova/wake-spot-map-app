@@ -1,10 +1,6 @@
-const request = async (method, url, data) => {
-    let options = {};
-
+const request = async (method, url, data, options = {}) => {
     if (method !== 'GET') {
-        options = {
-            method,
-        };
+        options.method = method;
     }
 
     if (data) {
@@ -12,6 +8,7 @@ const request = async (method, url, data) => {
             ...options,
             headers: {
                 'Content-Type': 'application/json',
+                // Authorization: `Bearer ${localStorage.getItem('token')}`
             },
             body: JSON.stringify(data),
         }
