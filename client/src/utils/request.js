@@ -8,7 +8,6 @@ const request = async (method, url, data, options = {}) => {
             ...options,
             headers: {
                 'Content-Type': 'application/json',
-                // Authorization: `Bearer ${localStorage.getItem('token')}`
             },
             body: JSON.stringify(data),
         }

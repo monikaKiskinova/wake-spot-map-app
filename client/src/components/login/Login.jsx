@@ -16,8 +16,8 @@ export default function Login({
         const authData = await login(values.email, values.password);
         console.log(authData);
         onLogin(authData);
-        navigate('/wakeparks');
-        return authData;
+        // navigate('/wakeparks');
+        // return authData;
     };
 
     const [_, loginAction, isPending] = useActionState(loginHandler, {email: '', password: ''})
@@ -27,8 +27,8 @@ export default function Login({
             <div className="login-container">
                 <h2>LOGIN</h2>
                 <form className="form login-form" action={loginAction}>
-                    <label htmlFor="username">Username</label>
-                    <input type="text" id="username" name="username" placeholder="Username" required />
+                    <label htmlFor="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Email" required />
 
                     <label htmlFor="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Password" required />
