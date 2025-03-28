@@ -7,6 +7,7 @@ import Home from './components/home/Home'
 import Footer from './components/footer/Footer'
 import Wakeparks from './components/wakeparks/Wakeparks'
 import Login from './components/login/Login'
+import Logout from './components/logout/Logout'
 import Register from './components/register/Register'
 import CreatePark from './components/create/CreatePark'
 import EditPark from './components/edit/EditPark'
@@ -26,8 +27,12 @@ function App() {
     setAuthData(resultData);
   };
 
+  const useLogoutHandler = () => {
+    setAuthData({});
+  };
+
   return (
-    <UserContext.Provider value={{...authData, userLoginHandler, userRegisterHandler}}>
+    <UserContext.Provider value={{...authData, userLoginHandler, userRegisterHandler, useLogoutHandler}}>
 
     <Header />
 
@@ -39,6 +44,7 @@ function App() {
       <Route path="/wakeparks/:parkId/edit" element={<EditPark />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/logout" element={<Logout />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
 
