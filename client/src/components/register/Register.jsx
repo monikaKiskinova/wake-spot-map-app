@@ -23,7 +23,7 @@ export default function Register() {
 
         userRegisterHandler(authData); 
 
-        navigate('/wakeparks');
+        navigate(-1);
     }
 
     const [_, registerAction, isPending] = useActionState(registerHandler, {email: '', username: '', password: '', repassword: ''})

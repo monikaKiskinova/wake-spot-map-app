@@ -44,9 +44,6 @@ div.parks-container {
     padding: 3rem 3.5rem;
     gap: 3em;
     justify-content: space-between;
-    /* background-image: linear-gradient(#f3eac4, #edd19f, #caa367); */
-    /* background-image: linear-gradient(#f4e1b6, #f3d69a, #eac38c); */
-    background-color: #a69e85;
 }
 
 div.parks-container article {

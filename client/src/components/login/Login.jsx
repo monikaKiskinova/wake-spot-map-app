@@ -14,7 +14,7 @@ export default function Login() {
         const {email, password} = Object.fromEntries(formData); 
         const authData = await login(email, password);
         userLoginHandler(authData);
-        navigate('/wakeparks');
+        navigate(-1);
         return authData;
     };
 

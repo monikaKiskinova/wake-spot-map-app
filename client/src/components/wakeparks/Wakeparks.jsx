@@ -1,18 +1,10 @@
-import { useEffect, useState } from 'react';
-
 import './Wakeparks.css'
-import { wakeparkService } from '../../services/wakeparksService';
+
 import WakeparkItem from './wakepark-item/WakeparkItem'
+import { useParks } from '../../api/wakeparkApi';
 
 export default function Wakeparks() {
-    const [parks, setParks] = useState([]);
-
-    useEffect(() => {
-        wakeparkService.getAll()
-            .then(result => {
-                setParks(result)
-            })
-    }, []);
+    const {parks} = useParks(); 
 
     return (
         <div className="outer-container">
@@ -27,7 +19,7 @@ export default function Wakeparks() {
 
                 {parks.length > 0
                     ? parks.map(park => <WakeparkItem key={park._id} {...park} />)
-                    : <h3 className="no-wakeparks">No wakeparks yet.</h3>
+                    : <h3 className="no-wakeparks" style={{paddingTop: "2em", paddingBottom: "5em", textAlign: "center"}}>No wakeparks yet.</h3>
                 }
 
             </div>
