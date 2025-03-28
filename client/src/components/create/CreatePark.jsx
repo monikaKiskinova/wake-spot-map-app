@@ -1,14 +1,15 @@
-import { wakeparkService } from '../../services/wakeparksService'; 
 import { useNavigate } from 'react-router';
 
 import './CreatePark.css'
+import { useCreatePark } from '../../api/wakeparkApi';
 
 export default function CreatePark() {
-    const navigate = useNavigate();
+    const navigate = useNavigate(); 
+    const {createPark} = useCreatePark();
 
     const submitAction = async (formData) => {
         const parkData = Object.fromEntries(formData);
-        await wakeparkService.create(parkData);
+        await createPark(parkData);
         navigate('/wakeparks');
     }
 

@@ -9,9 +9,7 @@ const baseUrl = 'http://localhost:3030/data/wakeparks';
 //     async getOne(parkId) {
 //         return request.get(`${baseUrl}/${parkId}`);
 //     },
-//     create (parkData) {
-//         return request.post(baseUrl, parkData);
-//     },
+
 //     edit (parkId, parkData) {
 //         return request.put(`${baseUrl}/${parkId}`, {...parkData, _id: parkId});
 //     },
@@ -31,4 +29,22 @@ export const useParks = () => {
     return {
         parks,
     };
+};
+
+export const useCreatePark = () => {
+    const {accessToken} = useContext(UserContext); 
+
+    const options = {
+        headers: {
+            'X-Authorization': accessToken,
+        }
+    }
+
+    const createPark = (parkData) => {
+        return request.post(baseUrl, parkData, options);
+    };
+
+    return {
+        createPark, 
+    }
 };
