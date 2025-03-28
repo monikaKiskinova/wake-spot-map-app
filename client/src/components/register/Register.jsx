@@ -14,9 +14,8 @@ export default function Register() {
         const {username, email, password, rePassword} = Object.fromEntries(formData);
 
         if (password !== rePassword) {
-            console.log('Password mismatch');
             // show error message
-            console.error('Password and Confirm Password should match!')
+            alert('Password and Confirm Password should match!')
             return;
         }
 
@@ -44,7 +43,7 @@ export default function Register() {
                     <input type="password" id="password" name="password" placeholder="Password" required />
 
                     <label htmlFor="rePassword">Confirm Password</label>
-                    <input type="rePassword" id="rePassword" name="rePassword" placeholder="Confirm Password" required />
+                    <input type="password" id="rePassword" name="rePassword" placeholder="Confirm Password" required />
                     <input type="submit" className="btn submit" value="Register" disabled={isPending} />
                 </form>
                 <p>Already been on our map? Just <Link to="/login">log in</Link></p>
