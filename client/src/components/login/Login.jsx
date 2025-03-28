@@ -11,8 +11,8 @@ export default function Login() {
     const {userLoginHandler} = useContext(UserContext);
 
     const loginHandler = async (_, formData) => {
-        const values = Object.fromEntries(formData); 
-        const authData = await login(values.email, values.password);
+        const {email, password} = Object.fromEntries(formData); 
+        const authData = await login(email, password);
         userLoginHandler(authData);
         navigate('/wakeparks');
         return authData;

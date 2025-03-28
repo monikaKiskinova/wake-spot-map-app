@@ -22,8 +22,12 @@ function App() {
     setAuthData(resultData);
   };
 
+  const userRegisterHandler = (resultData) => {
+    setAuthData(resultData);
+  };
+
   return (
-    <UserContext.Provider value={{...authData, userLoginHandler}}>
+    <UserContext.Provider value={{...authData, userLoginHandler, userRegisterHandler}}>
 
     <Header />
 
