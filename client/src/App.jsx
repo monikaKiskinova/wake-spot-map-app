@@ -13,15 +13,17 @@ import EditPark from './components/edit/EditPark'
 import ParkDetails from './components/park-details/ParkDetails'
 import PageNotFound from './components/page-not-found/PageNotFound'
 
-function App() {
-  const [authData, setAuthData] = useState({});
+import { UserContext } from './contexts/UserContext'
 
-  const userLoginHadler = (resultData) => {
+function App() {
+  const [authData, setAuthData] = useState({}); 
+
+  const userLoginHandler = (resultData) => {
     setAuthData(resultData);
   };
 
   return (
-    <> 
+    <UserContext.Provider value={{...authData, userLoginHandler}}>
 
     <Header />
 
@@ -31,14 +33,14 @@ function App() {
       <Route path="/wakeparks/create" element={<CreatePark />} />
       <Route path="/wakeparks/:parkId/details" element={<ParkDetails />} />
       <Route path="/wakeparks/:parkId/edit" element={<EditPark />} />
-      <Route path="/login" element={<Login onLogin={userLoginHadler}/>} />
+      <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
 
     <Footer />
 
-    </>
+    </UserContext.Provider>
   )
 }
 

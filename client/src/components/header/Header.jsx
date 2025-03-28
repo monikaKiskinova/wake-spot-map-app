@@ -1,14 +1,17 @@
 import { Link } from 'react-router'
 
 import './Header.css'
+import { useContext } from 'react';
+import { UserContext } from '../../contexts/UserContext';
 // import styles from './Header.module.css'
 
 export default function Header() {
+    const {username} = useContext(UserContext);
 
     return (
         <header>
             <div id="logo-container">
-                <p className="logo"><Link to="/">Wake Spot Map</Link></p>
+                <p className="logo" id="logo"><Link to="/">Wake Spot Map</Link></p>
             </div>
             <nav>
                 <div className="nav-items-container" id="nav-items-container">
@@ -17,8 +20,9 @@ export default function Header() {
                         <li> <Link to="/wakeparks">Wake Parks</Link></li>
 
                         {/* <!-- loggedIn user --> */}
-                        <li> <Link className="create" to="/wakeparks/create">Create</Link></li>
-                        <li> <Link className="profile" to="/profile">My Profile</Link></li>
+                        <li> <Link className="create" to="/wakeparks/create">Add a wakepark</Link></li>
+                        {/* <li> <Link className="profile" to="/profile">My Profile</Link></li> */}
+                        <li> <Link className="profile" to="/profile">{username}'s Profile</Link></li>
                         <li> <Link className="logout" to="/logout">Log out</Link></li>
 
                         {/* <!-- all users --> */}

@@ -12,14 +12,15 @@ nav ul.nav-items {
     gap: 2em;
 }
 
+p.logo {
+    /* color: white; */
+    font-size: 2em;
+    padding-left: 3.5rem;
+    text-wrap: nowrap;
+}
+
 .nav-items a, 
 p.logo a {
     color: #f3eac4;
     text-decoration: none;
-}
-
-p.logo {
-    color: white;
-    font-size: 2em;
-    padding-left: 3.5rem;
 }
