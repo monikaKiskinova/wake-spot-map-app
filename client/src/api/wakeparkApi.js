@@ -2,21 +2,22 @@ import { useState, useEffect, useContext } from "react";
 import request from "../utils/request";
 import { UserContext } from "../contexts/UserContext";
 
+
 const baseUrl = 'http://localhost:3030/data/wakeparks';
 
-// export const wakeparkService = {
+const useAuth = () => {
+    const {accessToken} = useContext(UserContext); 
 
-//     async getOne(parkId) {
-//         return request.get(`${baseUrl}/${parkId}`);
-//     },
+    const options = {
+        headers: {
+            'X-Authorization': accessToken,
+        }
+    }
 
-//     edit (parkId, parkData) {
-//         return request.put(`${baseUrl}/${parkId}`, {...parkData, _id: parkId});
-//     },
-//     delete(parkId) {
-//         return request.delete(`${baseUrl}/${parkId}`);
-//     }
-// }
+    return {
+        options,
+    }
+}
 
 export const useParks = () => {
     const [parks, setParks] = useState([]);
@@ -31,14 +32,21 @@ export const useParks = () => {
     };
 };
 
-export const useCreatePark = () => {
-    const {accessToken} = useContext(UserContext); 
+export const usePark = (parkId) => {
+    const [park, setPark] = useState({});
 
-    const options = {
-        headers: {
-            'X-Authorization': accessToken,
-        }
-    }
+    useEffect(() => {
+        request.get(`${baseUrl}/${parkId}`)
+            .then(setPark)
+    }, [parkId]);
+
+    return {
+        park,
+    };
+};
+
+export const useCreatePark = () => {
+    const {options} = useAuth();
 
     const createPark = (parkData) => {
         return request.post(baseUrl, parkData, options);
@@ -46,5 +54,29 @@ export const useCreatePark = () => {
 
     return {
         createPark, 
+    }
+};
+
+export const useEditPark = () => {
+    const {options} = useAuth();
+
+    const editPark = (parkId, parkData) => {
+        return request.put(`${baseUrl}/${parkId}`, {...parkData, _id: parkId}, options);
+    };
+
+    return {
+        editPark, 
+    }
+};
+
+export const useDeletePark = () => {
+    const {options} = useAuth(); 
+
+    const deletePark = (parkId) => {
+        return request.delete(`${baseUrl}/${parkId}`, null, options);
+    };
+
+    return {
+        deletePark, 
     }
 };

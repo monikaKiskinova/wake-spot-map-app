@@ -1,22 +1,18 @@
-import { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router';
+
 import './EditPark.css'
-import { useParams } from 'react-router';
-import { wakeparkService } from '../../services/wakeparksService';
-import { useNavigate } from 'react-router';
+
+import { useEditPark, usePark } from '../../api/wakeparkApi';
 
 export default function EditPark() {
     const navigate = useNavigate();
-    const {parkId} = useParams();
-    const [park, setPark] = useState({});
-
-    useEffect(() => {
-        wakeparkService.getOne(parkId)
-            .then(setPark)
-    }, [parkId]);
+    const {parkId} = useParams(); 
+    const {park} = usePark(parkId);
+    const {editPark} = useEditPark(parkId);
 
     const formAction = async (formData) => {
         const parkData = Object.fromEntries(formData);
-        await wakeparkService.edit(parkId, parkData); 
+        await editPark(parkId, parkData); 
         navigate(`/wakeparks/${parkId}/details`);
     }
 

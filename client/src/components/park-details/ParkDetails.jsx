@@ -1,20 +1,15 @@
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useParams, useNavigate } from 'react-router';
 import { Link } from 'react-router'
-import { useNavigate } from 'react-router';
 
 import './ParkDetails.css'
-import { wakeparkService } from '../../services/wakeparksService';
+
+import { usePark, useDeletePark } from '../../api/wakeparkApi';
 
 export default function ParkDetails() {
     const navigate = useNavigate();
-    const {parkId} = useParams();
-    const [park, setPark] = useState({});
-
-    useEffect(() => {
-        wakeparkService.getOne(parkId)
-            .then(setPark);
-    }, [parkId]);
+    const {parkId} = useParams(); 
+    const {park} = usePark(parkId);
+    const { deletePark } = useDeletePark();
 
     const deleteParkClickHandler = async () => {
         const hasDeleteConfirm = confirm(`Are you sure you want to delete ${park.name}?`);
@@ -23,7 +18,7 @@ export default function ParkDetails() {
             return;
         }
 
-        await wakeparkService.delete(parkId);
+        await deletePark(parkId);
         navigate('/wakeparks');
     }
 
