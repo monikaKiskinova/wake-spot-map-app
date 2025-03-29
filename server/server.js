@@ -1346,58 +1346,62 @@
     	}
     };
     var seedData = {
-    	recipes: {
-    		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Easy Lasagna",
-    			img: "assets/lasagna.jpg",
-    			ingredients: [
-    				"1 tbsp Ingredient 1",
-    				"2 cups Ingredient 2",
-    				"500 g  Ingredient 3",
-    				"25 g Ingredient 4"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551279012
-    		},
-    		"8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Grilled Duck Fillet",
-    			img: "assets/roast.jpg",
-    			ingredients: [
-    				"500 g  Ingredient 1",
-    				"3 tbsp Ingredient 2",
-    				"2 cups Ingredient 3"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551344360
-    		},
-    		"985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			name: "Roast Trout",
-    			img: "assets/fish.jpg",
-    			ingredients: [
-    				"4 cups Ingredient 1",
-    				"1 tbsp Ingredient 2",
-    				"1 tbsp Ingredient 3",
-    				"750 g  Ingredient 4",
-    				"25 g Ingredient 5"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551388703
-    		}
+    	wakeparks: {
+            "4cb46ae1-44b0-4b35-9aaf-f3e42b584d06": {
+                "name": "Wake Park Varna",
+                "continent": "Europe",
+                "country": "Bulgaria",
+                "address": "Coastal Alley 9010 Varna",
+                "mainImageUrl": "https://wakescout.com/wp-content/uploads/2020/03/XQN_b56d709e688cd830787ca00dccb24c396e5d0621.jpeg",
+                "imageUrl1": "",
+                "imageUrl2": "",
+                "imageUrl3": "",
+                "website": "https://wakeparkvarna.com/",
+                "info": "Wake Park Varna is the first and only wake park in Varna and on the north coast of The Black Sea in Bulgaria. \nYou can ride with your own equipment or rent from the park. They also offer wakeboarding lessons. \nThere are two lines - one for beginners and one for more advanced riders. ",
+                "_id": "f5204ea3-8bd1-48c1-b445-b3b2a5535c3a",
+                "_createdOn": 1743170673506,
+                "_updatedOn": 1743186794975,
+                "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc"
+            },
+    		"1240549d-f0e0-497e-ab99-eb8f703713d7": {
+                "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                "name": "Park X Plovdiv",
+                "continent": "Europe",
+                "country": "Bulgaria",
+                "address": "Stryama, Plovdiv",
+                "mainImageUrl": "https://wakescout.com/wp-content/uploads/2020/03/REA_beb9368ffcf14f0857624ef90e14eecaff4e16f2-920x518.jpeg",
+                "imageUrl": "",
+                "website": "",
+                "info": "Park X Plovdiv is a wakepark featuring 3 x Two Tower Systems and SHAPE obstacles: 4 x kickers, roller pop off, rooftop, wedge rail, curve slider and 20 m straight pipe.",
+                "_createdOn": 1743190505915,
+                "_id": "4e97a1ce-41d0-4bda-9a93-1a7bbcb9142b"
+            },
+            "13c1bfb2-0fce-4e5a-8975-f6196a3932be": {
+                "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                "name": "Welldoers",
+                "continent": "Europe",
+                "country": "Bulgaria",
+                "address": "4147 Kalekovets, Plovdiv",
+                "mainImageUrl": "https://welldoers.com/dynamic/gallery/OTdQ9yoDhN.jpg",
+                "imageUrl": "",
+                "website": "https://welldoers.com/",
+                "info": "Welldoers is located only 13km from “Kapana” in Plovdiv, in the field of the village of Kalekovets. \nThe park has two lines - Rookie and Pro.",
+                "_createdOn": 1743228224820,
+                "_id": "c61afd3b-ffa4-439b-af36-54292a5aebae"
+            },
+            "13c1bfb2-0fce-4e5a-8975-f6196a3957ff": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "name": "Wakeboard Lift",
+                "continent": "Europe",
+                "country": "Austria",
+                "address": "1220 Wien, Am Wehr 1 - Neue Donau",
+                "mainImageUrl": "https://wakeboardlift.at/wp-content/uploads/2018/08/2.jpg",
+                "imageUrl": "",
+                "website": "https://wakeboardlift.at/en/home-english/",
+                "info": "Vienna´s one and only cable park, established in 2008. \nThere is a SHAPE Double Roof Top, a SHAPE SLider, UNIT Kicker & a UNIT Up Rail. ",
+                "_createdOn": 1743246289235,
+                "_id": "c561d8ac-144e-42af-8e10-32a8160d1550"
+            }, 
     	},
     	comments: {
     		"0a272c58-b7ea-4e09-a000-7ec988248f66": {
