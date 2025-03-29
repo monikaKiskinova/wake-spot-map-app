@@ -42,16 +42,22 @@ div.title .btn:hover {
 div.parks-container {
     display: flex;
     padding: 3rem 3.5rem;
-    gap: 3em;
-    justify-content: space-between;
+    gap: 2em;
+    justify-content: space-between; 
+    flex-wrap: wrap;
 }
 
 div.parks-container article {
+    max-width: 30%;
+    min-width: fit-content;
     text-align: center;
     box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.5);
     padding: 2em 1em;
     border-radius: 0.5em; 
     background-image: linear-gradient(#f4e1b6, #f3d69a, #eac38c);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 div.parks-container article h2 {
@@ -63,19 +69,30 @@ div.parks-container article p {
     padding-bottom: 1em;
 }
 
+/* div.parks-container article div.info-container {
+    display: flex;
+    flex-direction: column;
+} */
 div.parks-container article div.img-container {
-    padding-bottom: 1em;
-    /* border-radius: 1.5em;  */
-    border-radius: 50%; 
-    overflow: hidden;
+    margin-bottom: 1em;
+    /* flex-grow: 1; */
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: aqua;  */
+} 
+
+div.parks-container article div.img-container img {
+    border-radius: 0.3em; 
 }
 
 
 
 @media (max-width: 600px) {
-    div.parks-container {
+    /* div.parks-container {
         flex-direction: column;
-    }
+    } */
 
     div.parks-container article {
         width: fit-content;

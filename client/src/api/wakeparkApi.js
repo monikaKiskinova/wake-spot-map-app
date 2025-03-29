@@ -4,6 +4,7 @@ import { UserContext } from "../contexts/UserContext";
 
 
 const baseUrl = 'http://localhost:3030/data/wakeparks';
+const PAGE_SIZE = 3;
 
 const useAuth = () => {
     const {accessToken} = useContext(UserContext); 
@@ -42,6 +43,25 @@ export const usePark = (parkId) => {
 
     return {
         park,
+    };
+};
+
+export const useLatestParks = () => {
+    const [latestParks, setLatestParks] = useState([]);
+
+    useEffect(() => {
+        const searchParams = new URLSearchParams({
+            sortBy: "_createdOn desc",
+            pageSize: PAGE_SIZE, 
+            select: "name,country,mainImageUrl,_id",
+        })
+
+        request.get(`${baseUrl}?${searchParams.toString()}`)
+            .then(setLatestParks)
+    }, []);
+
+    return {
+        latestParks,
     };
 };
 

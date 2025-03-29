@@ -1,8 +1,12 @@
 import { Link } from 'react-router'
 
 import './Home.css'
+import { useLatestParks } from '../../api/wakeparkApi';
+import ParkArticleItem from './parkArticleItem/ParkArticleItem';
 
 export default function Home() {
+    const { latestParks } = useLatestParks();
+
     return (
         <>
             <div className="feature">
@@ -12,30 +16,12 @@ export default function Home() {
                 </div>
             </div>
             <div className="parks-container">
-                <article className="park-article">
-                    <h2>Park Name</h2>
-                    <p className="country">Country</p>
-                    <div className="img-container">
-                        <img src="/images/article-img.jpg" alt="" width="400px" />
-                    </div>
-                    <Link to="/wakeparks/wakeId/details" className="btn see-more-btn">See more...</Link>
-                </article>
-                <article className="park-article">
-                    <h2>Park Name</h2>
-                    <p className="country">Country</p>
-                    <div className="img-container">
-                        <img src="/images/article-img.jpg" alt="" width="400px" />
-                    </div>
-                    <Link to="/wakeparks/wakeId/details" className="btn see-more-btn">See more...</Link>
-                </article>
-                <article className="park-article">
-                    <h2>Park Name</h2>
-                    <p className="country">Country</p>
-                    <div className="img-container">
-                        <img src="/images/article-img.jpg" alt="" width="400px" />
-                    </div>
-                    <Link to="/wakeparks/wakeId/details" className="btn see-more-btn">See more...</Link>
-                </article>
+
+                {latestParks.length > 0
+                    ? latestParks.map(park => <ParkArticleItem key={park._id} {...park} />)
+                    : <h2 className="no-wakeparks" style={{ padding: "2em", textAlign: "center" }}>No wakeparks yet.</h2>
+                }
+
             </div>
         </>
     );
