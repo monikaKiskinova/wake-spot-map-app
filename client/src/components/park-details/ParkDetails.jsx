@@ -4,17 +4,22 @@ import { Link } from 'react-router'
 import './ParkDetails.css'
 
 import { usePark, useDeletePark } from '../../api/wakeparkApi';
+import { useContext } from 'react';
+import { UserContext } from '../../contexts/UserContext';
 
 export default function ParkDetails() {
     const navigate = useNavigate();
-    const {parkId} = useParams(); 
-    const {park} = usePark(parkId);
+    const { parkId } = useParams();
+    const { park } = usePark(parkId);
     const { deletePark } = useDeletePark();
+    const { _id: userId } = useContext(UserContext);
+
+    const isOwner = park._ownerId === userId;
 
     const deleteParkClickHandler = async () => {
         const hasDeleteConfirm = confirm(`Are you sure you want to delete ${park.name}?`);
 
-        if(!hasDeleteConfirm) {
+        if (!hasDeleteConfirm) {
             return;
         }
 
@@ -42,10 +47,15 @@ export default function ParkDetails() {
                         <p className="address">{park.address}</p>
                         <p className="info">{park.info}</p>
                     </div>
-                    <div className="btn-container">
-                        <Link to={`/wakeparks/${parkId}/edit`} className="btn edit-btn">Edit</Link>
-                        <button onClick={deleteParkClickHandler} className="btn delete-btn">Delete</button>
-                    </div>
+
+                    {isOwner
+                        ?
+                        <div className="btn-container">
+                            <Link to={`/wakeparks/${parkId}/edit`} className="btn edit-btn">Edit</Link>
+                            <button onClick={deleteParkClickHandler} className="btn delete-btn">Delete</button>
+                        </div>
+                        : null
+                    }
                 </div>
             </div>
             <div className="comments-container">
@@ -55,8 +65,8 @@ export default function ParkDetails() {
                     <p>Some comment</p>
                 </div>
                 <div className="btn-container">
-                        <Link to="" className="btn comment-btn">Add a comment</Link>
-                    </div>
+                    <Link to="" className="btn comment-btn">Add a comment</Link>
+                </div>
             </div>
         </div>
     );

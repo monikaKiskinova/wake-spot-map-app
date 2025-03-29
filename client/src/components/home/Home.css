@@ -69,19 +69,13 @@ div.parks-container article p {
     padding-bottom: 1em;
 }
 
-/* div.parks-container article div.info-container {
-    display: flex;
-    flex-direction: column;
-} */
 div.parks-container article div.img-container {
     margin-bottom: 1em;
-    /* flex-grow: 1; */
-        height: 400px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /* background-color: aqua;  */
-} 
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 div.parks-container article div.img-container img {
     border-radius: 0.3em; 
