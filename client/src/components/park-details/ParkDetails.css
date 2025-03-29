@@ -10,8 +10,11 @@ div.comments-container {
     display: flex;
     gap: 2em;
     padding: 2em;
-    min-width: fit-content;
     border-radius: 0.5em; 
+}
+
+div.details-container {
+    min-width: fit-content;
 }
 
 div.details-container .images-container {
@@ -61,6 +64,37 @@ div.comments-container h3 {
 }
 
 
+
+div.comment-form-container {
+    margin-top: 1.5em;
+}
+
+/* comments form */
+form.comments-form {
+    border: 1px solid #3a3b29;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.5);
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+form.comments-form label {
+    display: none;
+}
+
+form.comments-form textarea {
+    box-sizing: border-box;
+    max-width: 75%;
+}
+
+form.comments-form textarea::placeholder {
+    padding-left: 0.5em;
+}
+
+
+
 /* button containers styles */
 div.details-container .btn-container, 
 div.comments-container .btn-container {
@@ -84,6 +118,10 @@ div.details-container .btn-container .delete-btn {
     }
 
     div.details-container .small-images-container {
+        flex-direction: column;
+    }
+
+    form.comments-form {
         flex-direction: column;
     }
 }

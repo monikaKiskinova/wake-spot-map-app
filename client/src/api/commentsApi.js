@@ -33,13 +33,19 @@ export const useComments = (parkId) => {
 
     return {
         comments,
+        setComments
     };
 };
 
 export const useCreateComment = () => {
     const {options} = useAuth();
 
-    const createComment = (parkId, username, comment) => {
+    const createComment = (parkId, username, comment) => { 
+
+        if(comment.length === 0) {
+            return;
+        }
+
         return request.post(baseUrl, {parkId, username, comment}, options);
     };
 

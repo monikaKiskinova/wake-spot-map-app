@@ -1,0 +1,9 @@
+div.comment a {
+    text-decoration: underline;
+    font-size: 0.8em;
+    color: #3a3b29;
+}
+
+div.comment a:hover {
+    text-decoration: none;
+}

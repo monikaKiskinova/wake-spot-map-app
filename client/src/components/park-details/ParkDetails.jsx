@@ -15,15 +15,20 @@ export default function ParkDetails() {
     const { park } = usePark(parkId);
     const { deletePark } = useDeletePark();
     const { _id: userId, username } = useContext(UserContext);
-    const { comments } = useComments(parkId);
-    const {createComment} = useCreateComment();
+    const { comments, setComments } = useComments(parkId);
+    const { createComment } = useCreateComment();
 
     const isOwner = park._ownerId === userId;
 
     const formAction = async (formData) => {
         const commentData = Object.fromEntries(formData);
-        const comment = await createComment(parkId, username, commentData.comment); 
-        navigate(`/wakeparks/${parkId}/details`); 
+        const comment = await createComment(parkId, username, commentData.comment);
+
+        if (!comment) {
+            return;
+        }
+
+        setComments(state => [...state, comment])
     }
 
     const deleteParkClickHandler = async () => {
@@ -70,23 +75,27 @@ export default function ParkDetails() {
             </div>
             <div className="comments-container">
                 <h3>Comments:</h3>
+                <div className="comment-container">
 
-                {comments.length > 0
-                    ? comments.map(comment => <CommentItem key={comment._id} {...comment} />)
-                    : <h2 className="no-comments" style={{ padding: "1em", textAlign: "center", fontSize: "1.8em" }}>No comments yet.</h2>
+                    {comments.length > 0
+                        ? comments.map(comment => <CommentItem key={comment._id} {...comment} />)
+                        : <h2 className="no-comments" style={{ padding: "1em", textAlign: "center", fontSize: "1.8em" }}>No comments yet.</h2>
+                    }
+
+                </div>
+
+                {username
+                    ?
+                    <div className="comment-form-container">
+                        <form className="comments-form" action={formAction}>
+                            <label htmlFor="comment">Comments about the park:</label>
+                            <textarea id="comment" name="comment" rows="2" cols="100" placeholder="Write your comment here..."></textarea>
+                            <input type="submit" className="btn comment-btn" defaultValue="Add a comment" />
+                        </form>
+                    </div>
+                    : null
                 }
 
-                <div className="comment-container">
-                    <form className="comments-form" action={formAction}>
-                        <label htmlFor="comment">Comments about the park:</label>
-                        <textarea id="comment" name="comment" rows="2" cols="65" placeholder="Write your comment here..."></textarea>
-                        {/* <Link to="" className="btn comment-btn">Add a comment</Link> */}
-                        <button className="btn comment-btn">Add a comment</button>
-                    </form>
-                </div>
-                {/* <div className="btn-container">
-                    <Link to="" className="btn comment-btn">Add a comment</Link>
-                </div> */}
             </div>
         </div>
     );

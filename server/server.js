@@ -1402,6 +1402,19 @@
                 "_createdOn": 1743246289235,
                 "_id": "c561d8ac-144e-42af-8e10-32a8160d1550"
             }, 
+            "143e5265-333e-4150-80e4-16b61de31aa0": {
+                "_ownerId": "136a20fe-1a23-4097-bbec-2f8d410ba5fa",
+                "name": "Sliders Cable Park",
+                "continent": "Africa",
+                "country": "Egypt",
+                "address": "El Gouna Entrance, Hurghada, Red Sea Governorate",
+                "mainImageUrl": "https://images.squarespace-cdn.com/content/v1/54009b9ae4b0d7aba09c4f3a/ff0ceef6-1736-47c8-8f61-486754a8e299/65083217_2165293363583510_1999313744508747776_n.jpg?format=2500w",
+                "imageUrl": "",
+                "website": "https://www.sliderscablepark.com/",
+                "info": "Open all year round, located in the beautiful coastal town of El Gouna. Sliders is one of the world's largest cable parks. \n25 Minutes north from Hurghada Airport",
+                "_createdOn": 1743247606642,
+                "_id": "1ca32b36-a65c-4a58-8e2c-22cb631cd523"
+              }
     	},
     	comments: {
     		"0a272c58-b7ea-4e09-a000-7ec988248f66": {
