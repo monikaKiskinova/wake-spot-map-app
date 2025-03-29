@@ -22,7 +22,7 @@ export default function Header() {
                         {username
                             ? (
                                 <>
-                                {/* <!-- loggedIn user --> */}
+                                    {/* <!-- loggedIn user --> */}
                                     <li> <Link className="create" to="/wakeparks/create">Add a wakepark</Link></li>
                                     <li> <Link className="profile" to="/profile">{username}'s Profile</Link></li>
                                     <li> <Link className="logout" to="/logout">Log out</Link></li>
@@ -31,6 +31,7 @@ export default function Header() {
                             : (
                                 <>
                                     {/* <!-- all users --> */}
+                                    <li> <Link className="create" to="/wakeparks/create">Add a wakepark</Link></li>
                                     <li> <Link className="login" to="/login">Log in</Link></li>
                                 </>
                             )

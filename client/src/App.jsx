@@ -15,9 +15,10 @@ import ParkDetails from './components/park-details/ParkDetails'
 import PageNotFound from './components/page-not-found/PageNotFound'
 
 import { UserContext } from './contexts/UserContext'
+import AuthGuard from './guards/AuthGuard'
 
 function App() {
-  const [authData, setAuthData] = useState({}); 
+  const [authData, setAuthData] = useState({});
 
   const userLoginHandler = (resultData) => {
     setAuthData(resultData);
@@ -32,23 +33,25 @@ function App() {
   };
 
   return (
-    <UserContext.Provider value={{...authData, userLoginHandler, userRegisterHandler, useLogoutHandler}}>
+    <UserContext.Provider value={{ ...authData, userLoginHandler, userRegisterHandler, useLogoutHandler }}>
 
-    <Header />
+      <Header />
 
-    <Routes>
-      <Route index element={<Home />} />
-      <Route path="/wakeparks" element={<Wakeparks />} />
-      <Route path="/wakeparks/create" element={<CreatePark />} />
-      <Route path="/wakeparks/:parkId/details" element={<ParkDetails />} />
-      <Route path="/wakeparks/:parkId/edit" element={<EditPark />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/logout" element={<Logout />} />
-      <Route path="*" element={<PageNotFound />} />
-    </Routes>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/wakeparks" element={<Wakeparks />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/wakeparks/:parkId/details" element={<ParkDetails />} />
+        <Route element={<AuthGuard />}>
+          <Route path="/wakeparks/create" element={<CreatePark />} />
+          <Route path="/wakeparks/:parkId/edit" element={<EditPark />} />
+          <Route path="/logout" element={<Logout />} />
+        </Route>
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
 
-    <Footer />
+      <Footer />
 
     </UserContext.Provider>
   )
