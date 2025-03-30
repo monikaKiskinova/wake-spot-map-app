@@ -25,8 +25,8 @@ function App() {
     setAuthData(resultData);
   };
 
-  const userRegisterHandler = (resultData) => {
-    setAuthData(resultData);
+  const userRegisterHandler = ({email, username, accessToken, _id}) => {
+    setAuthData({email, username, accessToken, _id});
   };
 
   const useLogoutHandler = () => {

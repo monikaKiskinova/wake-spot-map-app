@@ -21,7 +21,7 @@ export default function Register() {
 
         const authData = await register(email, username, password); 
 
-        userRegisterHandler(authData); 
+        userRegisterHandler({...authData}); 
 
         navigate('/wakeparks');
     }
