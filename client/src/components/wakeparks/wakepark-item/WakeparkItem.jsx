@@ -1,10 +1,12 @@
 import { Link } from 'react-router'
 
+import ImageContainer from '../../image-container/ImageContainer';
+
 // import './WakeparkItem.css'
 // import '../Wakeparks.css'
 
 export default function WakeparkItem({
-    _id, name, country, address, mainImageUrl, imageUrl,
+    _id, name, country, address, mainImageUrl, imageUrls,
 }) {
 
     return (
@@ -19,15 +21,13 @@ export default function WakeparkItem({
                     <p className="address">{address}</p>
                 </div>
                 <div className="images-container">
-                    <div className="img-container">
-                        <img src="/images/article-img.jpg" alt="" width="220px" />
-                    </div>
-                    <div className="img-container">
-                        <img src="/images/article-img.jpg" alt="" width="220px" />
-                    </div>
-                    <div className="img-container">
-                        <img src="/images/article-img.jpg" alt="" width="220px" />
-                    </div>
+
+                    {imageUrls.length > 0
+                        ?
+                        imageUrls.map(image => <ImageContainer key={imageUrls.indexOf(image)} image={image} />) 
+                        : null
+                    }
+
                 </div>
                 <div className="btn-container">
                     <Link to={`/wakeparks/${_id}/details`} className="btn see-more-btn">See more...</Link>

@@ -50,7 +50,8 @@ div.wakeparks-container section.park-article div.park-details-container {
 
 div.wakeparks-container .images-container {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 4.4em;
     flex-wrap: wrap;
 }
 

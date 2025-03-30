@@ -40,6 +40,7 @@ div.title .btn:hover {
 
 /* parks-container styles */
 div.parks-container {
+    max-width: 100%;
     display: flex;
     padding: 3rem 3.5rem;
     gap: 2em;
@@ -63,6 +64,7 @@ div.parks-container article {
 div.parks-container article h2 {
     font-size: 2em;
     padding-bottom: 0.3em;
+    max-width: 15ch;
 }
 
 div.parks-container article p {

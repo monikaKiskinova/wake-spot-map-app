@@ -68,8 +68,9 @@ export const useLatestParks = () => {
 export const useCreatePark = () => {
     const {options} = useAuth();
 
-    const createPark = (parkData) => {
-        return request.post(baseUrl, parkData, options);
+    // const createPark = (parkData) => {
+    const createPark = ({name, continent, country, address, mainImageUrl, imageUrl1, imageUrl2, imageUrl3, website, info}) => {
+        return request.post(baseUrl, {name, continent, country, address, mainImageUrl, imageurls: [imageUrl1, imageUrl2, imageUrl3], website, info}, options);
     };
 
     return {

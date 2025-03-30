@@ -8,8 +8,10 @@ export default function CreatePark() {
     const {createPark} = useCreatePark();
 
     const submitAction = async (formData) => {
+        // const parkData = Object.fromEntries(formData);
         const parkData = Object.fromEntries(formData);
-        await createPark(parkData);
+        // await createPark(parkData);
+        await createPark({...parkData});
         navigate('/wakeparks');
     }
 
@@ -41,14 +43,14 @@ export default function CreatePark() {
                 <label htmlFor="imageUrl">Image:</label>
                 <input type="url" name="mainImageUrl" placeholder="Main Image" required />
 
-                <label htmlFor="imageUrl">Image:</label>
-                <input type="url" name="imageUrl" placeholder="Add Another Image" />
+                <label htmlFor="imageUrl1">Image:</label>
+                <input type="url" name="imageUrl1" placeholder="Add Another Image" />
                 
-                <label htmlFor="imageUrl">Image:</label>
-                <input type="url" name="imageUrl" placeholder="Add Another Image" />
+                <label htmlFor="imageUrl2">Image:</label>
+                <input type="url" name="imageUrl2" placeholder="Add Another Image" />
                 
-                <label htmlFor="imageUrl">Image:</label>
-                <input type="url" name="imageUrl" placeholder="Add Another Image" />
+                <label htmlFor="imageUrl3">Image:</label>
+                <input type="url" name="imageUrl3" placeholder="Add Another Image" />
 
                 <label htmlFor="website">Website:</label>
                 <input type="url" id="website" name="website" placeholder="Website" />
