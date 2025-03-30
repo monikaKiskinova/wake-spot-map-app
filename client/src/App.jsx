@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router'
-import { useState } from 'react'
 import './App.css'
 
 import Header from './components/header/Header'
@@ -17,9 +16,10 @@ import PageNotFound from './components/page-not-found/PageNotFound'
 import { UserContext } from './contexts/UserContext'
 import AuthGuard from './guards/AuthGuard'
 import GuestGuard from './guards/GuestGuard'
+import useLocalStorage from './hooks/useLocalStorage'
 
 function App() {
-  const [authData, setAuthData] = useState({});
+  const [authData, setAuthData] = useLocalStorage('auth',{});
 
   const userLoginHandler = (resultData) => {
     setAuthData(resultData);
