@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from 'react-router';
 import { Link } from 'react-router'
 import { useContext } from 'react';
+import { v4 as uuid} from 'uuid'
 
 import './ParkDetails.css'
 
@@ -47,12 +48,12 @@ export default function ParkDetails() {
             <div className="details-container">
                 <div className="images-container">
                     <div className="main-img-container">
-                        <img src={park.mainImageUrl} alt="" width="450px" />
+                        <img src={park.mainImageUrl} alt="image or logo of the wakepark" width="450px" />
                     </div>
                     <div className="small-images-container">
                         {park.imageUrls?.length > 0
                             ?
-                            park.imageUrls.map(image => <img src={image} alt="image from the wakepark" width="220px" key={park.imageUrls.indexOf(image)} />)
+                            park.imageUrls.map(image => <img src={image} alt="image from the wakepark" width="220px" key={uuid()} />)
                             : null
                         }
                     </div>

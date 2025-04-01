@@ -70,7 +70,18 @@ export const useCreatePark = () => {
 
     // const createPark = (parkData) => {
     const createPark = ({name, continent, country, address, mainImageUrl, imageUrl1, imageUrl2, imageUrl3, website, info}) => {
-        return request.post(baseUrl, {name, continent, country, address, mainImageUrl, imageurls: [imageUrl1, imageUrl2, imageUrl3], website, info}, options);
+        let imageUrls = [];
+        if(imageUrl1 !== ''){
+            imageUrls.push(imageUrl1);
+        }
+        if(imageUrl2 !== ''){
+            imageUrls.push(imageUrl2);
+        }
+        if(imageUrl3 !== ''){
+            imageUrls.push(imageUrl3);
+        }
+
+        return request.post(baseUrl, {name, continent, country, address, mainImageUrl, imageUrls, website, info}, options);
     };
 
     return {
@@ -81,8 +92,19 @@ export const useCreatePark = () => {
 export const useEditPark = () => {
     const {options} = useAuth();
 
-    const editPark = (parkId, parkData) => {
-        return request.put(`${baseUrl}/${parkId}`, {...parkData, _id: parkId}, options);
+    const editPark = (parkId, {imageUrl1, imageUrl2, imageUrl3, ...parkData}) => {
+        let imageUrls = [];
+        if(imageUrl1 !== ''){
+            imageUrls.push(imageUrl1);
+        }
+        if(imageUrl2 !== ''){
+            imageUrls.push(imageUrl2);
+        }
+        if(imageUrl3 !== ''){
+            imageUrls.push(imageUrl3);
+        }
+
+        return request.put(`${baseUrl}/${parkId}`, {...parkData, imageUrls, _id: parkId}, options);
     };
 
     return {

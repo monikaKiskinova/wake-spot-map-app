@@ -1,4 +1,5 @@
 import { Link } from 'react-router'
+import { v4 as uuid} from 'uuid';
 
 import ImageContainer from '../../image-container/ImageContainer';
 
@@ -24,7 +25,7 @@ export default function WakeparkItem({
 
                     {imageUrls?.length > 0
                         ?
-                        imageUrls.map(image => <ImageContainer key={imageUrls.indexOf(image)} image={image} />) 
+                        imageUrls.map(image => <ImageContainer key={uuid()} image={image} />) 
                         : null
                     }
 

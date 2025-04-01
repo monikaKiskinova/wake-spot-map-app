@@ -8,11 +8,10 @@ export default function CreatePark() {
     const {createPark} = useCreatePark();
 
     const submitAction = async (formData) => {
-        // const parkData = Object.fromEntries(formData);
         const parkData = Object.fromEntries(formData);
-        // await createPark(parkData);
-        await createPark({...parkData});
-        navigate('/wakeparks');
+        const createdPark = await createPark({...parkData});
+        const parkId = createdPark._id;
+        navigate(`/wakeparks/${parkId}/details`);
     }
 
     return (

@@ -45,13 +45,13 @@ export default function EditPark() {
                 <input type="url" id="mainImageUrl" name="mainImageUrl" defaultValue={park.mainImageUrl} placeholder="Main Image" required />
 
                 <label htmlFor="imageUrl">Image:</label>
-                <input type="url" id="" name="imageUrl1" defaultValue={park.imageUrl1} placeholder="Add Another Image" />
+                <input type="url" id="" name="imageUrl1" defaultValue={park.imageUrls?.length > 0 ? park.imageUrls[0] : null} placeholder="Add Another Image" />
                 
                 <label htmlFor="imageUrl">Image:</label>
-                <input type="url" id="" name="imageUrl2" defaultValue={park.imageUrl2} placeholder="Add Another Image" />
+                <input type="url" id="" name="imageUrl2" defaultValue={park.imageUrls?.length > 1 ? park.imageUrls[1] : null} placeholder="Add Another Image" />
                 
                 <label htmlFor="imageUrl">Image:</label>
-                <input type="url" id="" name="imageUrl3" defaultValue={park.imageUrl} placeholder="Add Another Image" />
+                <input type="url" id="" name="imageUrl3" defaultValue={park.imageUrls?.length > 2 ? park.imageUrls[2] : null} placeholder="Add Another Image" />
 
                 <label htmlFor="website">Website:</label>
                 <input type="url" id="website" name="website" defaultValue={park.website} placeholder="Website" />
