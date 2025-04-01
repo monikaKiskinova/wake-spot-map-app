@@ -10,6 +10,8 @@ div.search-container label {
 div.search-container input {
     width: 45%;
     padding: 0.2em 0.5em;
+    border-radius: 0.3em;
+    border-width: 1px;
 }
 
 

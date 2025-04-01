@@ -8,7 +8,6 @@ import { usePark, useDeletePark } from '../../api/wakeparkApi';
 import { UserContext } from '../../contexts/UserContext';
 import { useComments, useCreateComment } from '../../api/commentsApi';
 import CommentItem from './comments-item/CommentItem';
-import ImageContainer from '../image-container/ImageContainer';
 
 export default function ParkDetails() {
     const navigate = useNavigate();
@@ -54,12 +53,8 @@ export default function ParkDetails() {
                         {park.imageUrls?.length > 0
                             ?
                             park.imageUrls.map(image => <img src={image} alt="image from the wakepark" width="220px" key={park.imageUrls.indexOf(image)} />)
-                            // park.imageUrls.map(image => <ImageContainer key={park.imageUrls.indexOf(image)} image={image} />)
                             : null
                         }
-                        {/* <img src="/images/article-img.jpg" alt="" width="220px" />
-                        <img src="/images/article-img.jpg" alt="" width="220px" />
-                        <img src="/images/article-img.jpg" alt="" width="220px" /> */}
                     </div>
                 </div>
                 <div className="park-details-container">

@@ -22,7 +22,7 @@ export default function WakeparkItem({
                 </div>
                 <div className="images-container">
 
-                    {imageUrls.length > 0
+                    {imageUrls?.length > 0
                         ?
                         imageUrls.map(image => <ImageContainer key={imageUrls.indexOf(image)} image={image} />) 
                         : null

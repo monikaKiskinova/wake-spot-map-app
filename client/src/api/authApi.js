@@ -39,10 +39,12 @@ export const useLogout = () => {
         }
 
         request.get(`${baseUrl}/logout`, null, options)
-            .then(useLogoutHandler)
+            // .then(useLogoutHandler)
+            .finally(useLogoutHandler);
     },[accessToken, useLogoutHandler]);
 
     return {
-        isLoggedOut: Boolean(!accessToken),
+        // isLoggedOut: Boolean(!accessToken),
+        isLoggedOut: !!accessToken,
     }
 }

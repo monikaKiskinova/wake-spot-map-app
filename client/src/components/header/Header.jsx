@@ -24,7 +24,7 @@ export default function Header() {
                                 <>
                                     {/* <!-- loggedIn user --> */}
                                     <li> <Link className="create" to="/wakeparks/create">Add a wakepark</Link></li>
-                                    <li> <Link className="profile" to="/profile">{username}'s Profile</Link></li>
+                                    {/* <li> <Link className="profile" to="/profile">{username}'s Profile</Link></li> */}
                                     <li> <Link className="logout" to="/logout">Log out</Link></li>
                                 </>
                             )

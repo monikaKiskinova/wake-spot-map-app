@@ -21,7 +21,12 @@ div.details-container .images-container {
     max-width: 35%;
 }
 
+div.details-container .main-img-container {
+    margin-bottom: 0.5em;
+}
+
 div.details-container .small-images-container {
+    max-width: 100%;
     display: flex;
     /* justify-content: space-between; */
     gap: 1em;
@@ -38,6 +43,7 @@ div.details-container .small-images-container img {
 
 div.details-container div.park-details-container {
     max-width: 60%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     gap: 1.5em;
@@ -49,6 +55,11 @@ div.details-container div.info-container h2 {
 
 div.details-container div.info-container p.address {
     padding-bottom: 2em;
+}
+
+div.details-container div.info-container p.address, 
+div.details-container div.info-container p.location {
+    font-style: italic;
 }
 
 

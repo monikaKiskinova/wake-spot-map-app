@@ -41,7 +41,6 @@ export const useCreateComment = () => {
     const {options} = useAuth();
 
     const createComment = (parkId, username, comment) => { 
-
         if(comment.length === 0) {
             return;
         }
