@@ -13,6 +13,18 @@ export default function Header() {
         setIsActive((isActive) => !isActive);
     }
 
+    useEffect(() => {
+        const handleWindowResize = ()  => {
+            if (window.addEventListener) {
+                setIsActive(false);
+            } 
+        }
+      
+          window.addEventListener('resize', handleWindowResize)
+    }, []);
+
+      console.log(window.innerWidth)
+
     return (
         <header>
             <div id="logo-container">
