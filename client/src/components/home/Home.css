@@ -3,11 +3,11 @@ div.feature {
     /* background-image: url('/images/background.jpg');  */
     background-image: url('images/wakboarder_blue_smoke.jpg'); 
     background-repeat: no-repeat;
-    /* background-position: center top -5em;  */
-    /* background-position: right top -5em;  */
-    background-size: cover;
+    /* background-position: center top -8em;  */
+    background-position: right top -6.5em; 
+    /* background-size: cover; */
+    background-size: 1800px;
     padding: 16em 0;
-    /* padding: 8em 0; */
     display: flex;
     justify-content: flex-end;
 }
@@ -23,7 +23,7 @@ div.title {
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 0.3em;
     padding: 1em;
-    margin-right: 4em;
+    margin-right: 5.5em;
 }
 
 div.title h1 {
