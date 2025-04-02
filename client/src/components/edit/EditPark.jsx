@@ -3,18 +3,30 @@ import { useParams, useNavigate } from 'react-router';
 import './EditPark.css'
 
 import { useEditPark, usePark } from '../../api/wakeparkApi';
+import { useCountries } from '../../hooks/useCountries';
+import { useEffect } from 'react';
 
 export default function EditPark() {
     const navigate = useNavigate();
     const {parkId} = useParams(); 
     const {park} = usePark(parkId);
     const {editPark} = useEditPark(parkId);
+    const { continent, setContinent } = useCountries();
+    const { getCountries, countries, setCountries } = useCountries();
 
     const formAction = async (formData) => {
         const parkData = Object.fromEntries(formData);
         await editPark(parkId, parkData); 
         navigate(`/wakeparks/${parkId}/details`);
     }
+
+    useEffect(() => {
+        setContinent(park.continent); 
+    },[park.continent])
+
+    useEffect(() => {
+        getCountries(continent);
+    },[continent])
 
     return (
         <div className="outer-container">
@@ -25,7 +37,7 @@ export default function EditPark() {
                 <input type="text" id="name" name="name" defaultValue={park.name} placeholder="Name of Park" required />
 
                 <label htmlFor="continent">Choose a continent:</label>
-                <select id="continent" name="continent" value={park.continent} required>
+                <select onChange={e => {setContinent(e.target.value); park.country = '';}} id="continent" name="continent" value={continent} required>
                     <option value="--Choose a continent--">--Choose a continent--</option>
                     <option value="Europe">Europe</option>
                     <option value="Asia">Asia</option>
@@ -34,10 +46,13 @@ export default function EditPark() {
                     <option value="Africa">Africa</option>
                     <option value="Australia/Oceania">Australia/Oceania</option>
                 </select>
-
-                <label htmlFor="country">Country:</label>
-                <input type="text" id="country" name="country" defaultValue={park.country} placeholder="Country" required />
-
+                
+                <label htmlFor="country">--Choose a country--</label>
+                <select id="country" name="country" required>
+                    <option value={park.country ? park.country : '--Choose a country--'}>{park.country ? park.country : '--Choose a country--'}</option>
+                    {countries?.map(c => c !== park.country ? <option key={c} value={c}>{c}</option> : null)}
+                </select>
+                
                 <label htmlFor="address">Address:</label>
                 <input type="text" id="address" name="address" defaultValue={park.address} placeholder="Address" required />
 

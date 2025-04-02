@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import request from "../utils/request";
+// import request from "../utils/request";
 
 // const baseUrl = 'http://localhost:3030/data/countriesByContinent';
 
@@ -64,9 +64,15 @@ export const useCountries = () => {
         //     .then(setCountries)
     },[continent]);
 
+    const getCountries = (continent) => {
+        setCountries(countriesByContinent[continent]);
+    };
+
     return {
         countries, 
+        setCountries, 
         continent, 
-        setContinent
+        setContinent, 
+        getCountries,
     };
 };
