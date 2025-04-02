@@ -23,8 +23,6 @@ export default function Header() {
           window.addEventListener('resize', handleWindowResize)
     }, []);
 
-      console.log(window.innerWidth)
-
     return (
         <header>
             <div id="logo-container">
