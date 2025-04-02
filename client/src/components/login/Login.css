@@ -1,14 +1,15 @@
 .login-container {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.5);
     display: flex;
     flex-direction: column;
     /* width: 20%; */
     width: fit-content;
     text-align: center;
     align-items: center;
-    padding: 1em;
+    padding: 2em;
     border-radius: 0.3em;
-    margin-left: 6em;
+    /* margin-left: 6em; */
+    margin-right: 6em;
     margin-top: -13em; 
     box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.4);
 }
@@ -37,7 +38,7 @@ form.login-form .btn {
 }
 
 .login-container p a {
-    color: #3a3b29;
+    color: var(--dark-font-color);
     text-decoration: underline;
 }
 

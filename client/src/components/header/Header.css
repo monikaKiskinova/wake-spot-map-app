@@ -1,5 +1,5 @@
 header {
-    background-color: #3a3b29;
+    background-color: var(--dark-background-color);
     display: flex;
     justify-content: space-between;
     padding: 1.5rem 3rem;
@@ -21,6 +21,6 @@ p.logo {
 
 .nav-items a, 
 p.logo a {
-    color: #f3eac4;
+    color: var(--light-font-color);
     text-decoration: none;
 }

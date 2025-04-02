@@ -1,3 +1,9 @@
+div#outer-container {
+    background-color: var(--white-background-color);
+}
+
+
+/* search container */
 div.search-container {
     padding-bottom: 2em;
     text-align: center;
@@ -15,6 +21,7 @@ div.search-container input {
 }
 
 
+/* header */
 h1.all-wakeparks {
     font-size: 2.2em;
     text-align: center;
@@ -22,10 +29,12 @@ h1.all-wakeparks {
 
 
 
+/* wakeparks container */
 div.wakeparks-container {
     display: flex;
     flex-direction: column;
-    background-color: #a69e85;
+    /* background-color: var(--light-background-color); */
+    background-color: var(--white-background-color);
     gap: 2em;
 }
 
@@ -34,7 +43,9 @@ div.wakeparks-container section.park-article {
     gap: 3em;
     padding: 2em 3.5em;
     border-radius: 0.5em;
-    background-image: linear-gradient(#f4e1b6, #f3d69a, #eac38c); 
+    background-image: var(--background-gradient); 
+    /* background-color: var(--articles-background-color);  */
+    background-color: var(--light-background-color); 
     min-width: fit-content;
 }
 

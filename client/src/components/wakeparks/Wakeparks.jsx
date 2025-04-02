@@ -7,7 +7,7 @@ export default function Wakeparks() {
     const {parks} = useParks(); 
 
     return (
-        <div className="outer-container">
+        <div id="outer-container" className="outer-container">
             <h1 className="all-wakeparks">All Wakeparks</h1>
             <div className="search-container">
                 <form className="form search-form">

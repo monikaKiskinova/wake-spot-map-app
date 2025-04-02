@@ -3,8 +3,8 @@ section.park-article {
     gap: 3em;
     padding: 2em 3.5em;
     border-radius: 0.5em;
-    background-image: linear-gradient(#f4e1b6, #f3d69a, #eac38c); 
-    /* width: fit-content; */
+    background-image: var(--background-gradient); 
+    /* background-color: var(--articles-background-color);  */
     min-width: fit-content;
 }
 

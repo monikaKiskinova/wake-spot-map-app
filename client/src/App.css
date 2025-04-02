@@ -1,5 +1,27 @@
+:root {
+    /* --dark-background-color: #3a3b29;
+    --dark-font-color: #3a3b29;
+    --title-dark-font-color: #3a3b29;
+    --light-background-color: #a69e85;
+    --background-gradient: linear-gradient(#f4e1b6, #f3d69a, #eac38c); 
+    --light-font-color: #f4e1b6;  */
+    
+    --dark-background-color: #00767e;
+    /* --light-background-color: #b2d5d8;  */
+    --light-background-color: #e8f7fc; 
+    --white-background-color: #ffffff; 
+    --articles-background-color: #ffffff;
+    --dark-font-color: #00767e; 
+    --title-dark-font-color: #050100; 
+    --light-font-color: #ffffff;
+
+    /* --dark-background-color: #00529d;
+    --light-background-color: #dce2ef; 
+    --dark-font-color: #00529d;  */
+}
+
 div.feature {
-    background-color: #a69e85;
+    background-color: var(--light-background-color);
     background-image: url('public/images/background.jpg'); 
     background-repeat: no-repeat;
     background-position: center top -5em; 
@@ -15,8 +37,8 @@ div.feature {
 .delete-btn, 
 .comment-btn, 
 .btn.submit {
-    background-color: #3a3b29;
-    color: #f4e1b6;
+    background-color: var(--dark-background-color);
+    color: var(--light-font-color);
     text-wrap: nowrap;
 }
 
@@ -25,10 +47,9 @@ div.feature {
 .delete-btn:hover, 
 .comment-btn:hover, 
 .btn.submit:hover {
-    /* background-color: #a69e85; */
     background-color: transparent;
-    color: #3a3b29;
-    /* border: 2px solid #3a3b29; */
+    color: var(--dark-font-color);
+    /* border: 2px solid #var(--dark-background-color); */
     box-shadow: 0 0 0.5em 0 rgb(0, 0, 0, 0.4);
 }
 
